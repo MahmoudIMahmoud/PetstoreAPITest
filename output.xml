@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20200321 19:59:56.452" rpa="false">
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20200321 20:13:05.842" rpa="false">
 <suite id="s1" name="ZPetStoreAPI" source="D:\Work\eclipse-workspace\ZPetStoreAPI">
 <suite id="s1-s1" name="SmokeTests" source="D:\Work\eclipse-workspace\ZPetStoreAPI\SmokeTests.robot">
 <test id="s1-s1-t1" name="Test add pet">
@@ -10,8 +10,8 @@
 <arg>url=${Base}</arg>
 <arg>verify=True</arg>
 </arguments>
-<msg timestamp="20200321 19:59:56.845" level="INFO">Creating Session using : alias=session, url=https://petstore.swagger.io, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20200321 19:59:56.845" endtime="20200321 19:59:56.846"></status>
+<msg timestamp="20200321 20:13:06.171" level="INFO">Creating Session using : alias=session, url=https://petstore.swagger.io, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20200321 20:13:06.171" endtime="20200321 20:13:06.172"></status>
 </kw>
 <kw name="Add a pet">
 <assign>
@@ -25,13 +25,13 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200321 19:59:56.846" level="INFO" html="yes">Getting file '&lt;a href="file://D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json"&gt;D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json&lt;/a&gt;'.</msg>
-<msg timestamp="20200321 19:59:56.847" level="INFO">${body} = {
+<msg timestamp="20200321 20:13:06.173" level="INFO" html="yes">Getting file '&lt;a href="file://D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json"&gt;D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json&lt;/a&gt;'.</msg>
+<msg timestamp="20200321 20:13:06.173" level="INFO">${body} = {
     "name": "pet0",
     "photoUrls": [
         "https://www.rspca.org.au/sites/default/files/website/2019/adopt-a-pet-adopting-a-dog-600x375.jpg",
         "https://www.rspca.org.au/sites/default/fil...</msg>
-<status status="PASS" starttime="20200321 19:59:56.846" endtime="20200321 19:59:56.847"></status>
+<status status="PASS" starttime="20200321 20:13:06.172" endtime="20200321 20:13:06.173"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -41,8 +41,8 @@
 <assign>
 <var>&amp;{hdrs}</var>
 </assign>
-<msg timestamp="20200321 19:59:56.848" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
-<status status="PASS" starttime="20200321 19:59:56.847" endtime="20200321 19:59:56.848"></status>
+<msg timestamp="20200321 20:13:06.174" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20200321 20:13:06.173" endtime="20200321 20:13:06.174"></status>
 </kw>
 <kw name="Post Request" library="RequestsLibrary">
 <doc>Send a POST request on the session object found using the
@@ -56,7 +56,7 @@ given `alias`</doc>
 <assign>
 <var>${resp}</var>
 </assign>
-<msg timestamp="20200321 19:59:56.848" level="INFO">POST Request using : uri=/v2/pet, params=None, files=None, allow_redirects=True, timeout=None
+<msg timestamp="20200321 20:13:06.174" level="INFO">POST Request using : uri=/v2/pet, params=None, files=None, allow_redirects=True, timeout=None
 headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
 data={
     "name": "pet0",
@@ -82,11 +82,11 @@ data={
     "status": "good"
 } 
 json=None</msg>
-<msg timestamp="20200321 19:59:58.097" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200321 19:59:56.848" endtime="20200321 19:59:58.098"></status>
+<msg timestamp="20200321 20:13:07.304" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:06.174" endtime="20200321 20:13:07.305"></status>
 </kw>
-<msg timestamp="20200321 19:59:58.099" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200321 19:59:56.846" endtime="20200321 19:59:58.099"></status>
+<msg timestamp="20200321 20:13:07.307" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:06.172" endtime="20200321 20:13:07.307"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -94,20 +94,20 @@ json=None</msg>
 <arg>${resp.status_code}</arg>
 <arg>200</arg>
 </arguments>
-<msg timestamp="20200321 19:59:58.101" level="INFO">Argument types are:
+<msg timestamp="20200321 20:13:07.310" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20200321 19:59:58.100" endtime="20200321 19:59:58.102"></status>
+<status status="PASS" starttime="20200321 20:13:07.308" endtime="20200321 20:13:07.311"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${resp.json()['id']}</arg>
 </arguments>
-<msg timestamp="20200321 19:59:58.103" level="INFO">123</msg>
-<status status="PASS" starttime="20200321 19:59:58.102" endtime="20200321 19:59:58.104"></status>
+<msg timestamp="20200321 20:13:07.313" level="INFO">123</msg>
+<status status="PASS" starttime="20200321 20:13:07.312" endtime="20200321 20:13:07.313"></status>
 </kw>
-<status status="PASS" starttime="20200321 19:59:56.844" endtime="20200321 19:59:58.105" critical="yes"></status>
+<status status="PASS" starttime="20200321 20:13:06.170" endtime="20200321 20:13:07.314" critical="yes"></status>
 </test>
 <test id="s1-s1-t2" name="Test uppload pet image">
 <kw name="Create Session" library="RequestsLibrary" type="setup">
@@ -117,8 +117,8 @@ json=None</msg>
 <arg>url=${Base}</arg>
 <arg>verify=True</arg>
 </arguments>
-<msg timestamp="20200321 19:59:58.108" level="INFO">Creating Session using : alias=session, url=https://petstore.swagger.io, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20200321 19:59:58.107" endtime="20200321 19:59:58.109"></status>
+<msg timestamp="20200321 20:13:07.317" level="INFO">Creating Session using : alias=session, url=https://petstore.swagger.io, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20200321 20:13:07.317" endtime="20200321 20:13:07.318"></status>
 </kw>
 <kw name="Add a pet">
 <assign>
@@ -132,13 +132,13 @@ json=None</msg>
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200321 19:59:58.112" level="INFO" html="yes">Getting file '&lt;a href="file://D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json"&gt;D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json&lt;/a&gt;'.</msg>
-<msg timestamp="20200321 19:59:58.112" level="INFO">${body} = {
+<msg timestamp="20200321 20:13:07.320" level="INFO" html="yes">Getting file '&lt;a href="file://D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json"&gt;D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json&lt;/a&gt;'.</msg>
+<msg timestamp="20200321 20:13:07.321" level="INFO">${body} = {
     "name": "pet0",
     "photoUrls": [
         "https://www.rspca.org.au/sites/default/files/website/2019/adopt-a-pet-adopting-a-dog-600x375.jpg",
         "https://www.rspca.org.au/sites/default/fil...</msg>
-<status status="PASS" starttime="20200321 19:59:58.111" endtime="20200321 19:59:58.113"></status>
+<status status="PASS" starttime="20200321 20:13:07.319" endtime="20200321 20:13:07.321"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -148,8 +148,8 @@ json=None</msg>
 <assign>
 <var>&amp;{hdrs}</var>
 </assign>
-<msg timestamp="20200321 19:59:58.114" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
-<status status="PASS" starttime="20200321 19:59:58.113" endtime="20200321 19:59:58.114"></status>
+<msg timestamp="20200321 20:13:07.323" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20200321 20:13:07.322" endtime="20200321 20:13:07.323"></status>
 </kw>
 <kw name="Post Request" library="RequestsLibrary">
 <doc>Send a POST request on the session object found using the
@@ -163,7 +163,7 @@ given `alias`</doc>
 <assign>
 <var>${resp}</var>
 </assign>
-<msg timestamp="20200321 19:59:58.116" level="INFO">POST Request using : uri=/v2/pet, params=None, files=None, allow_redirects=True, timeout=None
+<msg timestamp="20200321 20:13:07.324" level="INFO">POST Request using : uri=/v2/pet, params=None, files=None, allow_redirects=True, timeout=None
 headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
 data={
     "name": "pet0",
@@ -189,11 +189,11 @@ data={
     "status": "good"
 } 
 json=None</msg>
-<msg timestamp="20200321 19:59:59.059" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200321 19:59:58.115" endtime="20200321 19:59:59.059"></status>
+<msg timestamp="20200321 20:13:08.161" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:07.323" endtime="20200321 20:13:08.161"></status>
 </kw>
-<msg timestamp="20200321 19:59:59.060" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200321 19:59:58.110" endtime="20200321 19:59:59.060"></status>
+<msg timestamp="20200321 20:13:08.162" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:07.319" endtime="20200321 20:13:08.162"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -201,18 +201,18 @@ json=None</msg>
 <arg>${resp.status_code}</arg>
 <arg>200</arg>
 </arguments>
-<msg timestamp="20200321 19:59:59.061" level="INFO">Argument types are:
+<msg timestamp="20200321 20:13:08.163" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20200321 19:59:59.060" endtime="20200321 19:59:59.061"></status>
+<status status="PASS" starttime="20200321 20:13:08.162" endtime="20200321 20:13:08.163"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${resp.json()['id']}</arg>
 </arguments>
-<msg timestamp="20200321 19:59:59.062" level="INFO">123</msg>
-<status status="PASS" starttime="20200321 19:59:59.062" endtime="20200321 19:59:59.062"></status>
+<msg timestamp="20200321 20:13:08.164" level="INFO">123</msg>
+<status status="PASS" starttime="20200321 20:13:08.164" endtime="20200321 20:13:08.164"></status>
 </kw>
 <kw name="Upload Image" library="upload">
 <arguments>
@@ -222,8 +222,8 @@ json=None</msg>
 <assign>
 <var>${resp}</var>
 </assign>
-<msg timestamp="20200321 20:00:00.768" level="INFO">${resp} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20200321 19:59:59.063" endtime="20200321 20:00:00.768"></status>
+<msg timestamp="20200321 20:13:09.807" level="INFO">${resp} = &lt;Response [400]&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:08.164" endtime="20200321 20:13:09.807"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -232,13 +232,13 @@ json=None</msg>
 <arg>200</arg>
 <arg>msg=${resp.content}</arg>
 </arguments>
-<msg timestamp="20200321 20:00:00.769" level="INFO">Argument types are:
+<msg timestamp="20200321 20:13:09.808" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<msg timestamp="20200321 20:00:00.769" level="FAIL">b'{"code":400,"type":"unknown","message":"org.jvnet.mimepull.MIMEParsingException: Missing start boundary"}': 400 != 200</msg>
-<status status="FAIL" starttime="20200321 20:00:00.768" endtime="20200321 20:00:00.769"></status>
+<msg timestamp="20200321 20:13:09.808" level="FAIL">b'{"code":400,"type":"unknown","message":"org.jvnet.mimepull.MIMEParsingException: Missing start boundary"}': 400 != 200</msg>
+<status status="FAIL" starttime="20200321 20:13:09.808" endtime="20200321 20:13:09.809"></status>
 </kw>
-<status status="FAIL" starttime="20200321 19:59:58.106" endtime="20200321 20:00:00.770" critical="yes">b'{"code":400,"type":"unknown","message":"org.jvnet.mimepull.MIMEParsingException: Missing start boundary"}': 400 != 200</status>
+<status status="FAIL" starttime="20200321 20:13:07.315" endtime="20200321 20:13:09.809" critical="yes">b'{"code":400,"type":"unknown","message":"org.jvnet.mimepull.MIMEParsingException: Missing start boundary"}': 400 != 200</status>
 </test>
 <test id="s1-s1-t3" name="Test Update pet data">
 <kw name="Create Session" library="RequestsLibrary" type="setup">
@@ -248,8 +248,8 @@ json=None</msg>
 <arg>url=${Base}</arg>
 <arg>verify=True</arg>
 </arguments>
-<msg timestamp="20200321 20:00:00.771" level="INFO">Creating Session using : alias=session, url=https://petstore.swagger.io, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20200321 20:00:00.771" endtime="20200321 20:00:00.772"></status>
+<msg timestamp="20200321 20:13:09.810" level="INFO">Creating Session using : alias=session, url=https://petstore.swagger.io, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20200321 20:13:09.810" endtime="20200321 20:13:09.811"></status>
 </kw>
 <kw name="Add a pet">
 <assign>
@@ -263,13 +263,13 @@ json=None</msg>
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200321 20:00:00.773" level="INFO" html="yes">Getting file '&lt;a href="file://D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json"&gt;D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json&lt;/a&gt;'.</msg>
-<msg timestamp="20200321 20:00:00.773" level="INFO">${body} = {
+<msg timestamp="20200321 20:13:09.812" level="INFO" html="yes">Getting file '&lt;a href="file://D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json"&gt;D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json&lt;/a&gt;'.</msg>
+<msg timestamp="20200321 20:13:09.812" level="INFO">${body} = {
     "name": "pet0",
     "photoUrls": [
         "https://www.rspca.org.au/sites/default/files/website/2019/adopt-a-pet-adopting-a-dog-600x375.jpg",
         "https://www.rspca.org.au/sites/default/fil...</msg>
-<status status="PASS" starttime="20200321 20:00:00.772" endtime="20200321 20:00:00.774"></status>
+<status status="PASS" starttime="20200321 20:13:09.811" endtime="20200321 20:13:09.812"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -279,8 +279,8 @@ json=None</msg>
 <assign>
 <var>&amp;{hdrs}</var>
 </assign>
-<msg timestamp="20200321 20:00:00.774" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
-<status status="PASS" starttime="20200321 20:00:00.774" endtime="20200321 20:00:00.775"></status>
+<msg timestamp="20200321 20:13:09.813" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20200321 20:13:09.812" endtime="20200321 20:13:09.813"></status>
 </kw>
 <kw name="Post Request" library="RequestsLibrary">
 <doc>Send a POST request on the session object found using the
@@ -294,7 +294,7 @@ given `alias`</doc>
 <assign>
 <var>${resp}</var>
 </assign>
-<msg timestamp="20200321 20:00:00.775" level="INFO">POST Request using : uri=/v2/pet, params=None, files=None, allow_redirects=True, timeout=None
+<msg timestamp="20200321 20:13:09.814" level="INFO">POST Request using : uri=/v2/pet, params=None, files=None, allow_redirects=True, timeout=None
 headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
 data={
     "name": "pet0",
@@ -320,11 +320,11 @@ data={
     "status": "good"
 } 
 json=None</msg>
-<msg timestamp="20200321 20:00:01.658" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:00.775" endtime="20200321 20:00:01.658"></status>
+<msg timestamp="20200321 20:13:10.632" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:09.813" endtime="20200321 20:13:10.633"></status>
 </kw>
-<msg timestamp="20200321 20:00:01.658" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:00.772" endtime="20200321 20:00:01.658"></status>
+<msg timestamp="20200321 20:13:10.634" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:09.811" endtime="20200321 20:13:10.635"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -333,18 +333,18 @@ json=None</msg>
 <arg>200</arg>
 <arg>msg=Failed to add a pet :${resp.content}</arg>
 </arguments>
-<msg timestamp="20200321 20:00:01.659" level="INFO">Argument types are:
+<msg timestamp="20200321 20:13:10.639" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:01.659" endtime="20200321 20:00:01.660"></status>
+<status status="PASS" starttime="20200321 20:13:10.636" endtime="20200321 20:13:10.640"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${resp.json()['id']}</arg>
 </arguments>
-<msg timestamp="20200321 20:00:01.660" level="INFO">123</msg>
-<status status="PASS" starttime="20200321 20:00:01.660" endtime="20200321 20:00:01.660"></status>
+<msg timestamp="20200321 20:13:10.641" level="INFO">123</msg>
+<status status="PASS" starttime="20200321 20:13:10.640" endtime="20200321 20:13:10.642"></status>
 </kw>
 <kw name="Get File" library="OperatingSystem">
 <doc>Returns the contents of a specified file.</doc>
@@ -354,8 +354,8 @@ json=None</msg>
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200321 20:00:01.661" level="INFO" html="yes">Getting file '&lt;a href="file://D:\Work\eclipse-workspace\ZPetStoreAPI\PetUpdate.json"&gt;D:\Work\eclipse-workspace\ZPetStoreAPI\PetUpdate.json&lt;/a&gt;'.</msg>
-<msg timestamp="20200321 20:00:01.661" level="INFO">${body} = {
+<msg timestamp="20200321 20:13:10.643" level="INFO" html="yes">Getting file '&lt;a href="file://D:\Work\eclipse-workspace\ZPetStoreAPI\PetUpdate.json"&gt;D:\Work\eclipse-workspace\ZPetStoreAPI\PetUpdate.json&lt;/a&gt;'.</msg>
+<msg timestamp="20200321 20:13:10.645" level="INFO">${body} = {
   "id": 123,
   "category": {
     "id": 0,
@@ -364,7 +364,7 @@ json=None</msg>
   "name": "doggie",
   "photoUrls": [
     "https://www.rspca.org.au/sites/default/files/website/2019/adopt-a-pet-adopting-a-small-a...</msg>
-<status status="PASS" starttime="20200321 20:00:01.660" endtime="20200321 20:00:01.662"></status>
+<status status="PASS" starttime="20200321 20:13:10.643" endtime="20200321 20:13:10.645"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -374,8 +374,8 @@ json=None</msg>
 <assign>
 <var>&amp;{hdrs}</var>
 </assign>
-<msg timestamp="20200321 20:00:01.662" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
-<status status="PASS" starttime="20200321 20:00:01.662" endtime="20200321 20:00:01.663"></status>
+<msg timestamp="20200321 20:13:10.646" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20200321 20:13:10.645" endtime="20200321 20:13:10.647"></status>
 </kw>
 <kw name="Put Request" library="RequestsLibrary">
 <doc>Send a PUT request on the session object found using the
@@ -389,7 +389,7 @@ given `alias`</doc>
 <assign>
 <var>${resp}</var>
 </assign>
-<msg timestamp="20200321 20:00:01.663" level="INFO">PUT Request using : uri=/v2/pet, params=None, files=None, allow_redirects=True, timeout=None
+<msg timestamp="20200321 20:13:10.648" level="INFO">PUT Request using : uri=/v2/pet, params=None, files=None, allow_redirects=True, timeout=None
 headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
 data={
   "id": 123,
@@ -410,8 +410,8 @@ data={
   "status": "Sold"
 } 
 json=None</msg>
-<msg timestamp="20200321 20:00:02.521" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:01.663" endtime="20200321 20:00:02.521"></status>
+<msg timestamp="20200321 20:13:11.446" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:10.647" endtime="20200321 20:13:11.446"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -420,18 +420,18 @@ json=None</msg>
 <arg>200</arg>
 <arg>msg=${resp.content}</arg>
 </arguments>
-<msg timestamp="20200321 20:00:02.522" level="INFO">Argument types are:
+<msg timestamp="20200321 20:13:11.447" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:02.521" endtime="20200321 20:00:02.522"></status>
+<status status="PASS" starttime="20200321 20:13:11.446" endtime="20200321 20:13:11.447"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${resp.content}</arg>
 </arguments>
-<msg timestamp="20200321 20:00:02.523" level="INFO">{"id":123,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["https://www.rspca.org.au/sites/default/files/website/2019/adopt-a-pet-adopting-a-small-animal-600x375.jpg"],"tags":[{"id":0,"name":"string"}],"status":"Sold"}</msg>
-<status status="PASS" starttime="20200321 20:00:02.523" endtime="20200321 20:00:02.524"></status>
+<msg timestamp="20200321 20:13:11.447" level="INFO">{"id":123,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["https://www.rspca.org.au/sites/default/files/website/2019/adopt-a-pet-adopting-a-small-animal-600x375.jpg"],"tags":[{"id":0,"name":"string"}],"status":"Sold"}</msg>
+<status status="PASS" starttime="20200321 20:13:11.447" endtime="20200321 20:13:11.448"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -440,9 +440,9 @@ json=None</msg>
 <arg>Sold</arg>
 <arg>msg=${resp.content}</arg>
 </arguments>
-<status status="PASS" starttime="20200321 20:00:02.524" endtime="20200321 20:00:02.525"></status>
+<status status="PASS" starttime="20200321 20:13:11.448" endtime="20200321 20:13:11.449"></status>
 </kw>
-<status status="PASS" starttime="20200321 20:00:00.770" endtime="20200321 20:00:02.526" critical="yes"></status>
+<status status="PASS" starttime="20200321 20:13:09.809" endtime="20200321 20:13:11.449" critical="yes"></status>
 </test>
 <test id="s1-s1-t4" name="Test find pet by status available">
 <kw name="Create Session" library="RequestsLibrary" type="setup">
@@ -452,8 +452,8 @@ json=None</msg>
 <arg>url=${Base}</arg>
 <arg>verify=True</arg>
 </arguments>
-<msg timestamp="20200321 20:00:02.528" level="INFO">Creating Session using : alias=session, url=https://petstore.swagger.io, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20200321 20:00:02.527" endtime="20200321 20:00:02.529"></status>
+<msg timestamp="20200321 20:13:11.450" level="INFO">Creating Session using : alias=session, url=https://petstore.swagger.io, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20200321 20:13:11.450" endtime="20200321 20:13:11.451"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -463,8 +463,8 @@ json=None</msg>
 <assign>
 <var>&amp;{hdrs}</var>
 </assign>
-<msg timestamp="20200321 20:00:02.530" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
-<status status="PASS" starttime="20200321 20:00:02.529" endtime="20200321 20:00:02.530"></status>
+<msg timestamp="20200321 20:13:11.451" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20200321 20:13:11.451" endtime="20200321 20:13:11.452"></status>
 </kw>
 <kw name="Get Request" library="RequestsLibrary">
 <doc>Send a GET request on the session object found using the
@@ -476,12 +476,12 @@ given `alias`</doc>
 <assign>
 <var>${resp}</var>
 </assign>
-<msg timestamp="20200321 20:00:02.531" level="INFO">GET Request using : uri=/v2/pet/findByStatus?status=available, params=None, allow_redirects=True, timeout=None
+<msg timestamp="20200321 20:13:11.452" level="INFO">GET Request using : uri=/v2/pet/findByStatus?status=available, params=None, allow_redirects=True, timeout=None
 headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
 data=None 
 json=None</msg>
-<msg timestamp="20200321 20:00:04.587" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:02.530" endtime="20200321 20:00:04.587"></status>
+<msg timestamp="20200321 20:13:12.886" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:11.452" endtime="20200321 20:13:12.887"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -490,12 +490,12 @@ json=None</msg>
 <arg>200</arg>
 <arg>msg=${resp.content}</arg>
 </arguments>
-<msg timestamp="20200321 20:00:04.588" level="INFO">Argument types are:
+<msg timestamp="20200321 20:13:12.888" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:04.587" endtime="20200321 20:00:04.588"></status>
+<status status="PASS" starttime="20200321 20:13:12.887" endtime="20200321 20:13:12.888"></status>
 </kw>
-<status status="PASS" starttime="20200321 20:00:02.526" endtime="20200321 20:00:04.589" critical="yes"></status>
+<status status="PASS" starttime="20200321 20:13:11.450" endtime="20200321 20:13:12.889" critical="yes"></status>
 </test>
 <test id="s1-s1-t5" name="Test find pet by status pending">
 <kw name="Create Session" library="RequestsLibrary" type="setup">
@@ -505,8 +505,8 @@ json=None</msg>
 <arg>url=${Base}</arg>
 <arg>verify=True</arg>
 </arguments>
-<msg timestamp="20200321 20:00:04.591" level="INFO">Creating Session using : alias=session, url=https://petstore.swagger.io, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20200321 20:00:04.590" endtime="20200321 20:00:04.591"></status>
+<msg timestamp="20200321 20:13:12.891" level="INFO">Creating Session using : alias=session, url=https://petstore.swagger.io, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20200321 20:13:12.890" endtime="20200321 20:13:12.891"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -516,8 +516,8 @@ json=None</msg>
 <assign>
 <var>&amp;{hdrs}</var>
 </assign>
-<msg timestamp="20200321 20:00:04.592" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
-<status status="PASS" starttime="20200321 20:00:04.592" endtime="20200321 20:00:04.592"></status>
+<msg timestamp="20200321 20:13:12.892" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20200321 20:13:12.891" endtime="20200321 20:13:12.892"></status>
 </kw>
 <kw name="Get Request" library="RequestsLibrary">
 <doc>Send a GET request on the session object found using the
@@ -529,12 +529,12 @@ given `alias`</doc>
 <assign>
 <var>${resp}</var>
 </assign>
-<msg timestamp="20200321 20:00:04.593" level="INFO">GET Request using : uri=/v2/pet/findByStatus?status=pending, params=None, allow_redirects=True, timeout=None
+<msg timestamp="20200321 20:13:12.893" level="INFO">GET Request using : uri=/v2/pet/findByStatus?status=pending, params=None, allow_redirects=True, timeout=None
 headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
 data=None 
 json=None</msg>
-<msg timestamp="20200321 20:00:05.997" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:04.592" endtime="20200321 20:00:05.997"></status>
+<msg timestamp="20200321 20:13:14.206" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:12.892" endtime="20200321 20:13:14.207"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -543,12 +543,12 @@ json=None</msg>
 <arg>200</arg>
 <arg>msg=${resp.content}</arg>
 </arguments>
-<msg timestamp="20200321 20:00:06.000" level="INFO">Argument types are:
+<msg timestamp="20200321 20:13:14.208" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:05.998" endtime="20200321 20:00:06.001"></status>
+<status status="PASS" starttime="20200321 20:13:14.207" endtime="20200321 20:13:14.208"></status>
 </kw>
-<status status="PASS" starttime="20200321 20:00:04.589" endtime="20200321 20:00:06.002" critical="yes"></status>
+<status status="PASS" starttime="20200321 20:13:12.889" endtime="20200321 20:13:14.208" critical="yes"></status>
 </test>
 <test id="s1-s1-t6" name="Test find pet by status sold">
 <kw name="Create Session" library="RequestsLibrary" type="setup">
@@ -558,8 +558,8 @@ json=None</msg>
 <arg>url=${Base}</arg>
 <arg>verify=True</arg>
 </arguments>
-<msg timestamp="20200321 20:00:06.006" level="INFO">Creating Session using : alias=session, url=https://petstore.swagger.io, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20200321 20:00:06.005" endtime="20200321 20:00:06.007"></status>
+<msg timestamp="20200321 20:13:14.210" level="INFO">Creating Session using : alias=session, url=https://petstore.swagger.io, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20200321 20:13:14.209" endtime="20200321 20:13:14.210"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -569,8 +569,8 @@ json=None</msg>
 <assign>
 <var>&amp;{hdrs}</var>
 </assign>
-<msg timestamp="20200321 20:00:06.010" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
-<status status="PASS" starttime="20200321 20:00:06.008" endtime="20200321 20:00:06.010"></status>
+<msg timestamp="20200321 20:13:14.211" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20200321 20:13:14.211" endtime="20200321 20:13:14.212"></status>
 </kw>
 <kw name="Get Request" library="RequestsLibrary">
 <doc>Send a GET request on the session object found using the
@@ -582,12 +582,12 @@ given `alias`</doc>
 <assign>
 <var>${resp}</var>
 </assign>
-<msg timestamp="20200321 20:00:06.012" level="INFO">GET Request using : uri=/v2/pet/findByStatus?status=sold, params=None, allow_redirects=True, timeout=None
+<msg timestamp="20200321 20:13:14.212" level="INFO">GET Request using : uri=/v2/pet/findByStatus?status=sold, params=None, allow_redirects=True, timeout=None
 headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
 data=None 
 json=None</msg>
-<msg timestamp="20200321 20:00:07.242" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:06.011" endtime="20200321 20:00:07.242"></status>
+<msg timestamp="20200321 20:13:15.455" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:14.212" endtime="20200321 20:13:15.455"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -596,12 +596,12 @@ json=None</msg>
 <arg>200</arg>
 <arg>msg=${resp.content}</arg>
 </arguments>
-<msg timestamp="20200321 20:00:07.245" level="INFO">Argument types are:
+<msg timestamp="20200321 20:13:15.458" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:07.243" endtime="20200321 20:00:07.246"></status>
+<status status="PASS" starttime="20200321 20:13:15.456" endtime="20200321 20:13:15.458"></status>
 </kw>
-<status status="PASS" starttime="20200321 20:00:06.003" endtime="20200321 20:00:07.246" critical="yes"></status>
+<status status="PASS" starttime="20200321 20:13:14.209" endtime="20200321 20:13:15.459" critical="yes"></status>
 </test>
 <test id="s1-s1-t7" name="Get Pet by Id">
 <kw name="Create Session" library="RequestsLibrary" type="setup">
@@ -611,8 +611,8 @@ json=None</msg>
 <arg>url=${Base}</arg>
 <arg>verify=True</arg>
 </arguments>
-<msg timestamp="20200321 20:00:07.250" level="INFO">Creating Session using : alias=session, url=https://petstore.swagger.io, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20200321 20:00:07.249" endtime="20200321 20:00:07.250"></status>
+<msg timestamp="20200321 20:13:15.462" level="INFO">Creating Session using : alias=session, url=https://petstore.swagger.io, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20200321 20:13:15.461" endtime="20200321 20:13:15.463"></status>
 </kw>
 <kw name="Add a pet">
 <assign>
@@ -626,13 +626,13 @@ json=None</msg>
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200321 20:00:07.252" level="INFO" html="yes">Getting file '&lt;a href="file://D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json"&gt;D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json&lt;/a&gt;'.</msg>
-<msg timestamp="20200321 20:00:07.253" level="INFO">${body} = {
+<msg timestamp="20200321 20:13:15.465" level="INFO" html="yes">Getting file '&lt;a href="file://D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json"&gt;D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json&lt;/a&gt;'.</msg>
+<msg timestamp="20200321 20:13:15.466" level="INFO">${body} = {
     "name": "pet0",
     "photoUrls": [
         "https://www.rspca.org.au/sites/default/files/website/2019/adopt-a-pet-adopting-a-dog-600x375.jpg",
         "https://www.rspca.org.au/sites/default/fil...</msg>
-<status status="PASS" starttime="20200321 20:00:07.252" endtime="20200321 20:00:07.253"></status>
+<status status="PASS" starttime="20200321 20:13:15.465" endtime="20200321 20:13:15.467"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -642,8 +642,8 @@ json=None</msg>
 <assign>
 <var>&amp;{hdrs}</var>
 </assign>
-<msg timestamp="20200321 20:00:07.255" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
-<status status="PASS" starttime="20200321 20:00:07.254" endtime="20200321 20:00:07.255"></status>
+<msg timestamp="20200321 20:13:15.468" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20200321 20:13:15.467" endtime="20200321 20:13:15.468"></status>
 </kw>
 <kw name="Post Request" library="RequestsLibrary">
 <doc>Send a POST request on the session object found using the
@@ -657,7 +657,7 @@ given `alias`</doc>
 <assign>
 <var>${resp}</var>
 </assign>
-<msg timestamp="20200321 20:00:07.256" level="INFO">POST Request using : uri=/v2/pet, params=None, files=None, allow_redirects=True, timeout=None
+<msg timestamp="20200321 20:13:15.470" level="INFO">POST Request using : uri=/v2/pet, params=None, files=None, allow_redirects=True, timeout=None
 headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
 data={
     "name": "pet0",
@@ -683,11 +683,11 @@ data={
     "status": "good"
 } 
 json=None</msg>
-<msg timestamp="20200321 20:00:08.246" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:07.255" endtime="20200321 20:00:08.247"></status>
+<msg timestamp="20200321 20:13:16.303" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:15.469" endtime="20200321 20:13:16.303"></status>
 </kw>
-<msg timestamp="20200321 20:00:08.248" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:07.251" endtime="20200321 20:00:08.249"></status>
+<msg timestamp="20200321 20:13:16.304" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:15.464" endtime="20200321 20:13:16.304"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -696,18 +696,18 @@ json=None</msg>
 <arg>200</arg>
 <arg>msg=Failed to add a pet :${resp.content}</arg>
 </arguments>
-<msg timestamp="20200321 20:00:08.252" level="INFO">Argument types are:
+<msg timestamp="20200321 20:13:16.305" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:08.250" endtime="20200321 20:00:08.253"></status>
+<status status="PASS" starttime="20200321 20:13:16.304" endtime="20200321 20:13:16.305"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${resp.json()['id']}</arg>
 </arguments>
-<msg timestamp="20200321 20:00:08.256" level="INFO">123</msg>
-<status status="PASS" starttime="20200321 20:00:08.254" endtime="20200321 20:00:08.256"></status>
+<msg timestamp="20200321 20:13:16.306" level="INFO">123</msg>
+<status status="PASS" starttime="20200321 20:13:16.305" endtime="20200321 20:13:16.306"></status>
 </kw>
 <kw name="Get File" library="OperatingSystem">
 <doc>Returns the contents of a specified file.</doc>
@@ -717,8 +717,8 @@ json=None</msg>
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200321 20:00:08.258" level="INFO" html="yes">Getting file '&lt;a href="file://D:\Work\eclipse-workspace\ZPetStoreAPI\PetUpdate.json"&gt;D:\Work\eclipse-workspace\ZPetStoreAPI\PetUpdate.json&lt;/a&gt;'.</msg>
-<msg timestamp="20200321 20:00:08.259" level="INFO">${body} = {
+<msg timestamp="20200321 20:13:16.307" level="INFO" html="yes">Getting file '&lt;a href="file://D:\Work\eclipse-workspace\ZPetStoreAPI\PetUpdate.json"&gt;D:\Work\eclipse-workspace\ZPetStoreAPI\PetUpdate.json&lt;/a&gt;'.</msg>
+<msg timestamp="20200321 20:13:16.307" level="INFO">${body} = {
   "id": 123,
   "category": {
     "id": 0,
@@ -727,7 +727,7 @@ json=None</msg>
   "name": "doggie",
   "photoUrls": [
     "https://www.rspca.org.au/sites/default/files/website/2019/adopt-a-pet-adopting-a-small-a...</msg>
-<status status="PASS" starttime="20200321 20:00:08.257" endtime="20200321 20:00:08.259"></status>
+<status status="PASS" starttime="20200321 20:13:16.306" endtime="20200321 20:13:16.307"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -737,8 +737,8 @@ json=None</msg>
 <assign>
 <var>&amp;{hdrs}</var>
 </assign>
-<msg timestamp="20200321 20:00:08.261" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
-<status status="PASS" starttime="20200321 20:00:08.260" endtime="20200321 20:00:08.261"></status>
+<msg timestamp="20200321 20:13:16.308" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20200321 20:13:16.307" endtime="20200321 20:13:16.308"></status>
 </kw>
 <kw name="Get Request" library="RequestsLibrary">
 <doc>Send a GET request on the session object found using the
@@ -751,12 +751,12 @@ given `alias`</doc>
 <assign>
 <var>${resp}</var>
 </assign>
-<msg timestamp="20200321 20:00:08.262" level="INFO">GET Request using : uri=/v2/pet/123, params=None, allow_redirects=True, timeout=None
+<msg timestamp="20200321 20:13:16.309" level="INFO">GET Request using : uri=/v2/pet/123, params=None, allow_redirects=True, timeout=None
 headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
 data=None 
 json=None</msg>
-<msg timestamp="20200321 20:00:09.197" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:08.261" endtime="20200321 20:00:09.198"></status>
+<msg timestamp="20200321 20:13:17.235" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:16.308" endtime="20200321 20:13:17.235"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -765,18 +765,18 @@ json=None</msg>
 <arg>200</arg>
 <arg>msg=${resp.content}</arg>
 </arguments>
-<msg timestamp="20200321 20:00:09.199" level="INFO">Argument types are:
+<msg timestamp="20200321 20:13:17.236" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:09.198" endtime="20200321 20:00:09.199"></status>
+<status status="PASS" starttime="20200321 20:13:17.235" endtime="20200321 20:13:17.236"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${resp.content}</arg>
 </arguments>
-<msg timestamp="20200321 20:00:09.200" level="INFO">{"id":123,"category":{"id":13,"name":"dog"},"name":"pet0","photoUrls":["https://www.rspca.org.au/sites/default/files/website/2019/adopt-a-pet-adopting-a-dog-600x375.jpg","https://www.rspca.org.au/sites/default/files/website/2019/adopt-a-pet-adopting-a-dog-600x375.jpg"],"tags":[{"id":0,"name":"dog"},{"id":1,"name":"stil dog"}],"status":"good"}</msg>
-<status status="PASS" starttime="20200321 20:00:09.200" endtime="20200321 20:00:09.200"></status>
+<msg timestamp="20200321 20:13:17.237" level="INFO">{"id":123,"category":{"id":13,"name":"dog"},"name":"pet0","photoUrls":["https://www.rspca.org.au/sites/default/files/website/2019/adopt-a-pet-adopting-a-dog-600x375.jpg","https://www.rspca.org.au/sites/default/files/website/2019/adopt-a-pet-adopting-a-dog-600x375.jpg"],"tags":[{"id":0,"name":"dog"},{"id":1,"name":"stil dog"}],"status":"good"}</msg>
+<status status="PASS" starttime="20200321 20:13:17.237" endtime="20200321 20:13:17.238"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -785,9 +785,9 @@ json=None</msg>
 <arg>pet0</arg>
 <arg>msg=${resp.content}</arg>
 </arguments>
-<status status="PASS" starttime="20200321 20:00:09.201" endtime="20200321 20:00:09.201"></status>
+<status status="PASS" starttime="20200321 20:13:17.238" endtime="20200321 20:13:17.239"></status>
 </kw>
-<status status="PASS" starttime="20200321 20:00:07.247" endtime="20200321 20:00:09.202" critical="yes"></status>
+<status status="PASS" starttime="20200321 20:13:15.460" endtime="20200321 20:13:17.239" critical="yes"></status>
 </test>
 <test id="s1-s1-t8" name="Test Update pet form data">
 <kw name="Create Session" library="RequestsLibrary" type="setup">
@@ -797,8 +797,8 @@ json=None</msg>
 <arg>url=${Base}</arg>
 <arg>verify=True</arg>
 </arguments>
-<msg timestamp="20200321 20:00:09.204" level="INFO">Creating Session using : alias=session, url=https://petstore.swagger.io, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20200321 20:00:09.203" endtime="20200321 20:00:09.204"></status>
+<msg timestamp="20200321 20:13:17.241" level="INFO">Creating Session using : alias=session, url=https://petstore.swagger.io, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20200321 20:13:17.240" endtime="20200321 20:13:17.241"></status>
 </kw>
 <kw name="Add a pet">
 <assign>
@@ -812,13 +812,13 @@ json=None</msg>
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200321 20:00:09.206" level="INFO" html="yes">Getting file '&lt;a href="file://D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json"&gt;D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json&lt;/a&gt;'.</msg>
-<msg timestamp="20200321 20:00:09.207" level="INFO">${body} = {
+<msg timestamp="20200321 20:13:17.242" level="INFO" html="yes">Getting file '&lt;a href="file://D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json"&gt;D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json&lt;/a&gt;'.</msg>
+<msg timestamp="20200321 20:13:17.243" level="INFO">${body} = {
     "name": "pet0",
     "photoUrls": [
         "https://www.rspca.org.au/sites/default/files/website/2019/adopt-a-pet-adopting-a-dog-600x375.jpg",
         "https://www.rspca.org.au/sites/default/fil...</msg>
-<status status="PASS" starttime="20200321 20:00:09.205" endtime="20200321 20:00:09.207"></status>
+<status status="PASS" starttime="20200321 20:13:17.242" endtime="20200321 20:13:17.243"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -828,8 +828,8 @@ json=None</msg>
 <assign>
 <var>&amp;{hdrs}</var>
 </assign>
-<msg timestamp="20200321 20:00:09.208" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
-<status status="PASS" starttime="20200321 20:00:09.207" endtime="20200321 20:00:09.208"></status>
+<msg timestamp="20200321 20:13:17.244" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20200321 20:13:17.243" endtime="20200321 20:13:17.244"></status>
 </kw>
 <kw name="Post Request" library="RequestsLibrary">
 <doc>Send a POST request on the session object found using the
@@ -843,7 +843,7 @@ given `alias`</doc>
 <assign>
 <var>${resp}</var>
 </assign>
-<msg timestamp="20200321 20:00:09.209" level="INFO">POST Request using : uri=/v2/pet, params=None, files=None, allow_redirects=True, timeout=None
+<msg timestamp="20200321 20:13:17.245" level="INFO">POST Request using : uri=/v2/pet, params=None, files=None, allow_redirects=True, timeout=None
 headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
 data={
     "name": "pet0",
@@ -869,11 +869,11 @@ data={
     "status": "good"
 } 
 json=None</msg>
-<msg timestamp="20200321 20:00:10.055" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:09.209" endtime="20200321 20:00:10.056"></status>
+<msg timestamp="20200321 20:13:18.108" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:17.244" endtime="20200321 20:13:18.108"></status>
 </kw>
-<msg timestamp="20200321 20:00:10.056" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:09.205" endtime="20200321 20:00:10.057"></status>
+<msg timestamp="20200321 20:13:18.109" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:17.242" endtime="20200321 20:13:18.109"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -882,18 +882,18 @@ json=None</msg>
 <arg>200</arg>
 <arg>msg=Failed to add a pet :${resp.content}</arg>
 </arguments>
-<msg timestamp="20200321 20:00:10.058" level="INFO">Argument types are:
+<msg timestamp="20200321 20:13:18.110" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:10.057" endtime="20200321 20:00:10.058"></status>
+<status status="PASS" starttime="20200321 20:13:18.109" endtime="20200321 20:13:18.110"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${resp.json()['id']}</arg>
 </arguments>
-<msg timestamp="20200321 20:00:10.059" level="INFO">123</msg>
-<status status="PASS" starttime="20200321 20:00:10.058" endtime="20200321 20:00:10.059"></status>
+<msg timestamp="20200321 20:13:18.111" level="INFO">123</msg>
+<status status="PASS" starttime="20200321 20:13:18.111" endtime="20200321 20:13:18.111"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -903,8 +903,8 @@ json=None</msg>
 <assign>
 <var>${id}</var>
 </assign>
-<msg timestamp="20200321 20:00:10.060" level="INFO">${id} = 123</msg>
-<status status="PASS" starttime="20200321 20:00:10.059" endtime="20200321 20:00:10.060"></status>
+<msg timestamp="20200321 20:13:18.112" level="INFO">${id} = 123</msg>
+<status status="PASS" starttime="20200321 20:13:18.111" endtime="20200321 20:13:18.112"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -915,38 +915,38 @@ json=None</msg>
 <assign>
 <var>&amp;{body}</var>
 </assign>
-<msg timestamp="20200321 20:00:10.061" level="INFO">&amp;{body} = { name=pet0update | status=pending }</msg>
-<status status="PASS" starttime="20200321 20:00:10.060" endtime="20200321 20:00:10.061"></status>
+<msg timestamp="20200321 20:13:18.113" level="INFO">&amp;{body} = { name=pet0update | status=pending }</msg>
+<status status="PASS" starttime="20200321 20:13:18.112" endtime="20200321 20:13:18.113"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
 <arguments>
-<arg>Content-Type=application/json</arg>
+<arg>Content-Type=application/x-www-form-urlencoded</arg>
 </arguments>
 <assign>
 <var>&amp;{hdrs}</var>
 </assign>
-<msg timestamp="20200321 20:00:10.062" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
-<status status="PASS" starttime="20200321 20:00:10.061" endtime="20200321 20:00:10.062"></status>
+<msg timestamp="20200321 20:13:18.114" level="INFO">&amp;{hdrs} = { Content-Type=application/x-www-form-urlencoded }</msg>
+<status status="PASS" starttime="20200321 20:13:18.113" endtime="20200321 20:13:18.114"></status>
 </kw>
 <kw name="Post Request" library="RequestsLibrary">
 <doc>Send a POST request on the session object found using the
 given `alias`</doc>
 <arguments>
 <arg>session</arg>
-<arg>uri=/v2/pet/${resp.json()['id']}</arg>
+<arg>uri=/v2/pet/${id}</arg>
 <arg>headers=${hdrs}</arg>
 <arg>data=${body}</arg>
 </arguments>
 <assign>
 <var>${resp}</var>
 </assign>
-<msg timestamp="20200321 20:00:10.063" level="INFO">POST Request using : uri=/v2/pet/123, params=None, files=None, allow_redirects=True, timeout=None
-headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
-data={"name": "pet0update", "status": "pending"} 
+<msg timestamp="20200321 20:13:18.115" level="INFO">POST Request using : uri=/v2/pet/123, params=None, files=None, allow_redirects=True, timeout=None
+headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded'} 
+data=name=pet0update&amp;status=pending 
 json=None</msg>
-<msg timestamp="20200321 20:00:10.893" level="INFO">${resp} = &lt;Response [415]&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:10.062" endtime="20200321 20:00:10.894"></status>
+<msg timestamp="20200321 20:13:18.998" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:18.115" endtime="20200321 20:13:18.999"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -955,13 +955,44 @@ json=None</msg>
 <arg>200</arg>
 <arg>msg=${resp.content}</arg>
 </arguments>
-<msg timestamp="20200321 20:00:10.897" level="INFO">Argument types are:
+<msg timestamp="20200321 20:13:19.003" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<msg timestamp="20200321 20:00:10.898" level="FAIL">b'&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;apiResponse&gt;&lt;type&gt;unknown&lt;/type&gt;&lt;/apiResponse&gt;': 415 != 200</msg>
-<status status="FAIL" starttime="20200321 20:00:10.895" endtime="20200321 20:00:10.899"></status>
+<status status="PASS" starttime="20200321 20:13:19.000" endtime="20200321 20:13:19.003"></status>
 </kw>
-<status status="FAIL" starttime="20200321 20:00:09.202" endtime="20200321 20:00:10.900" critical="yes">b'&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;apiResponse&gt;&lt;type&gt;unknown&lt;/type&gt;&lt;/apiResponse&gt;': 415 != 200</status>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.content}</arg>
+</arguments>
+<msg timestamp="20200321 20:13:19.006" level="INFO">{"code":200,"type":"unknown","message":"123"}</msg>
+<status status="PASS" starttime="20200321 20:13:19.005" endtime="20200321 20:13:19.007"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${resp.json()['code']}</arg>
+<arg>200</arg>
+<arg>msg=Faile to update the name: ${resp.content}</arg>
+</arguments>
+<msg timestamp="20200321 20:13:19.009" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:19.008" endtime="20200321 20:13:19.010"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${resp.json()['message']}</arg>
+<arg>${id}</arg>
+<arg>msg=Faile to update the status: ${resp.content}</arg>
+</arguments>
+<msg timestamp="20200321 20:13:19.012" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:19.011" endtime="20200321 20:13:19.013"></status>
+</kw>
+<status status="PASS" starttime="20200321 20:13:17.240" endtime="20200321 20:13:19.013" critical="yes"></status>
 </test>
 <test id="s1-s1-t9" name="Test Delete a pet">
 <kw name="Create Session" library="RequestsLibrary" type="setup">
@@ -971,8 +1002,8 @@ json=None</msg>
 <arg>url=${Base}</arg>
 <arg>verify=True</arg>
 </arguments>
-<msg timestamp="20200321 20:00:10.906" level="INFO">Creating Session using : alias=session, url=https://petstore.swagger.io, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20200321 20:00:10.904" endtime="20200321 20:00:10.907"></status>
+<msg timestamp="20200321 20:13:19.016" level="INFO">Creating Session using : alias=session, url=https://petstore.swagger.io, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20200321 20:13:19.015" endtime="20200321 20:13:19.017"></status>
 </kw>
 <kw name="Add a pet">
 <assign>
@@ -986,13 +1017,13 @@ json=None</msg>
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200321 20:00:10.909" level="INFO" html="yes">Getting file '&lt;a href="file://D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json"&gt;D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json&lt;/a&gt;'.</msg>
-<msg timestamp="20200321 20:00:10.910" level="INFO">${body} = {
+<msg timestamp="20200321 20:13:19.019" level="INFO" html="yes">Getting file '&lt;a href="file://D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json"&gt;D:\Work\eclipse-workspace\ZPetStoreAPI\PetSample.json&lt;/a&gt;'.</msg>
+<msg timestamp="20200321 20:13:19.019" level="INFO">${body} = {
     "name": "pet0",
     "photoUrls": [
         "https://www.rspca.org.au/sites/default/files/website/2019/adopt-a-pet-adopting-a-dog-600x375.jpg",
         "https://www.rspca.org.au/sites/default/fil...</msg>
-<status status="PASS" starttime="20200321 20:00:10.908" endtime="20200321 20:00:10.911"></status>
+<status status="PASS" starttime="20200321 20:13:19.018" endtime="20200321 20:13:19.019"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -1002,8 +1033,8 @@ json=None</msg>
 <assign>
 <var>&amp;{hdrs}</var>
 </assign>
-<msg timestamp="20200321 20:00:10.912" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
-<status status="PASS" starttime="20200321 20:00:10.911" endtime="20200321 20:00:10.912"></status>
+<msg timestamp="20200321 20:13:19.020" level="INFO">&amp;{hdrs} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20200321 20:13:19.020" endtime="20200321 20:13:19.021"></status>
 </kw>
 <kw name="Post Request" library="RequestsLibrary">
 <doc>Send a POST request on the session object found using the
@@ -1017,7 +1048,7 @@ given `alias`</doc>
 <assign>
 <var>${resp}</var>
 </assign>
-<msg timestamp="20200321 20:00:10.914" level="INFO">POST Request using : uri=/v2/pet, params=None, files=None, allow_redirects=True, timeout=None
+<msg timestamp="20200321 20:13:19.022" level="INFO">POST Request using : uri=/v2/pet, params=None, files=None, allow_redirects=True, timeout=None
 headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
 data={
     "name": "pet0",
@@ -1043,11 +1074,11 @@ data={
     "status": "good"
 } 
 json=None</msg>
-<msg timestamp="20200321 20:00:11.760" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:10.913" endtime="20200321 20:00:11.761"></status>
+<msg timestamp="20200321 20:13:19.875" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:19.021" endtime="20200321 20:13:19.875"></status>
 </kw>
-<msg timestamp="20200321 20:00:11.762" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:10.907" endtime="20200321 20:00:11.762"></status>
+<msg timestamp="20200321 20:13:19.875" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:19.017" endtime="20200321 20:13:19.875"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -1056,18 +1087,18 @@ json=None</msg>
 <arg>200</arg>
 <arg>msg=Failed to add a pet :${resp.content}</arg>
 </arguments>
-<msg timestamp="20200321 20:00:11.764" level="INFO">Argument types are:
+<msg timestamp="20200321 20:13:19.876" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:11.763" endtime="20200321 20:00:11.765"></status>
+<status status="PASS" starttime="20200321 20:13:19.876" endtime="20200321 20:13:19.876"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${resp.json()['id']}</arg>
 </arguments>
-<msg timestamp="20200321 20:00:11.767" level="INFO">123</msg>
-<status status="PASS" starttime="20200321 20:00:11.766" endtime="20200321 20:00:11.767"></status>
+<msg timestamp="20200321 20:13:19.877" level="INFO">123</msg>
+<status status="PASS" starttime="20200321 20:13:19.877" endtime="20200321 20:13:19.877"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -1077,8 +1108,8 @@ json=None</msg>
 <assign>
 <var>${id}</var>
 </assign>
-<msg timestamp="20200321 20:00:11.769" level="INFO">${id} = 123</msg>
-<status status="PASS" starttime="20200321 20:00:11.768" endtime="20200321 20:00:11.769"></status>
+<msg timestamp="20200321 20:13:19.878" level="INFO">${id} = 123</msg>
+<status status="PASS" starttime="20200321 20:13:19.878" endtime="20200321 20:13:19.878"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -1089,8 +1120,8 @@ json=None</msg>
 <assign>
 <var>&amp;{hdrs}</var>
 </assign>
-<msg timestamp="20200321 20:00:11.771" level="INFO">&amp;{hdrs} = { Content-Type=application/json | api_key=MyAPIkey }</msg>
-<status status="PASS" starttime="20200321 20:00:11.770" endtime="20200321 20:00:11.771"></status>
+<msg timestamp="20200321 20:13:19.879" level="INFO">&amp;{hdrs} = { Content-Type=application/json | api_key=MyAPIkey }</msg>
+<status status="PASS" starttime="20200321 20:13:19.879" endtime="20200321 20:13:19.879"></status>
 </kw>
 <kw name="Delete Request" library="RequestsLibrary">
 <doc>Send a DELETE request on the session object found using the
@@ -1103,12 +1134,12 @@ given `alias`</doc>
 <assign>
 <var>${resp}</var>
 </assign>
-<msg timestamp="20200321 20:00:11.773" level="INFO">DELETE Request using : uri=/v2/pet/123, params=None, allow_redirects=True, timeout=None
+<msg timestamp="20200321 20:13:19.880" level="INFO">DELETE Request using : uri=/v2/pet/123, params=None, allow_redirects=True, timeout=None
 headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'api_key': 'MyAPIkey'} 
 data=None 
 json=None</msg>
-<msg timestamp="20200321 20:00:12.656" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:11.772" endtime="20200321 20:00:12.656"></status>
+<msg timestamp="20200321 20:13:20.689" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200321 20:13:19.880" endtime="20200321 20:13:20.689"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -1117,35 +1148,35 @@ json=None</msg>
 <arg>200</arg>
 <arg>msg=${resp.content}</arg>
 </arguments>
-<msg timestamp="20200321 20:00:12.661" level="INFO">Argument types are:
+<msg timestamp="20200321 20:13:20.690" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20200321 20:00:12.658" endtime="20200321 20:00:12.662"></status>
+<status status="PASS" starttime="20200321 20:13:20.689" endtime="20200321 20:13:20.690"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${resp.content}</arg>
 </arguments>
-<msg timestamp="20200321 20:00:12.664" level="INFO">{"code":200,"type":"unknown","message":"123"}</msg>
-<status status="PASS" starttime="20200321 20:00:12.663" endtime="20200321 20:00:12.665"></status>
+<msg timestamp="20200321 20:13:20.691" level="INFO">{"code":200,"type":"unknown","message":"123"}</msg>
+<status status="PASS" starttime="20200321 20:13:20.691" endtime="20200321 20:13:20.691"></status>
 </kw>
-<status status="PASS" starttime="20200321 20:00:10.902" endtime="20200321 20:00:12.666" critical="yes"></status>
+<status status="PASS" starttime="20200321 20:13:19.014" endtime="20200321 20:13:20.691" critical="yes"></status>
 </test>
-<status status="FAIL" starttime="20200321 19:59:56.511" endtime="20200321 20:00:12.670"></status>
+<status status="FAIL" starttime="20200321 20:13:05.910" endtime="20200321 20:13:20.693"></status>
 </suite>
-<status status="FAIL" starttime="20200321 19:59:56.487" endtime="20200321 20:00:12.680"></status>
+<status status="FAIL" starttime="20200321 20:13:05.889" endtime="20200321 20:13:20.698"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="7" fail="2">Critical Tests</stat>
-<stat pass="7" fail="2">All Tests</stat>
+<stat pass="8" fail="1">Critical Tests</stat>
+<stat pass="8" fail="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="7" fail="2" id="s1" name="ZPetStoreAPI">ZPetStoreAPI</stat>
-<stat pass="7" fail="2" id="s1-s1" name="SmokeTests">ZPetStoreAPI.SmokeTests</stat>
+<stat pass="8" fail="1" id="s1" name="ZPetStoreAPI">ZPetStoreAPI</stat>
+<stat pass="8" fail="1" id="s1-s1" name="SmokeTests">ZPetStoreAPI.SmokeTests</stat>
 </suite>
 </statistics>
 <errors>
