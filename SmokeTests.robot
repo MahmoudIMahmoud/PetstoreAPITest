@@ -66,6 +66,8 @@ Test find pet by status sold
     Should Be Equal As Strings    ${resp.status_code}    200    msg=${resp.content}
 
 
+
+
 Get Pet by Id
     ${resp}    Add a pet
     Should Be Equal As Strings    ${resp.status_code}    200    msg=Failed to add a pet :${resp.content}  
@@ -77,20 +79,22 @@ Get Pet by Id
     Should Be Equal As Strings    ${resp.status_code}    200    msg=${resp.content}
     Log    ${resp.content}
     Should Be Equal As Strings    ${resp.json()['name']}    pet0    msg=${resp.content}
+
+
     
 Test Update pet form data    
     ${resp}    Add a pet
     Should Be Equal As Strings    ${resp.status_code}    200    msg=Failed to add a pet :${resp.content}  
     # Get the pet id to update
     Log        ${resp.json()['id']}
-    ${id}    Set Variable    ${resp.json()['id']} 
+    ${id}      Set Variable    ${resp.json()['id']} 
     &{body}    Create Dictionary    name=pet0update    status=pending
-    &{hdrs}    Create Dictionary    Content-Type=application/json
-    ${resp}    Post Request    session    uri=/v2/pet/${resp.json()['id']}    headers=${hdrs}        data=${body}
+    &{hdrs}    Create Dictionary    Content-Type=application/x-www-form-urlencoded
+    ${resp}    Post Request    session    uri=/v2/pet/${id}    headers=${hdrs}        data=${body}
     Should Be Equal As Strings    ${resp.status_code}    200    msg=${resp.content}
     Log    ${resp.content}
-    Should Be Equal As Strings    ${resp.json()['name']}        pet0update    msg=Faile to update the name: ${resp.content}
-    Should Be Equal As Strings    ${resp.json()['status']}      pending       msg=Faile to update the status: ${resp.content}
+    Should Be Equal As Strings    ${resp.json()['code']}        200    msg=Faile to update the name: ${resp.content}
+    Should Be Equal As Strings    ${resp.json()['message']}     ${id}        msg=Faile to update the status: ${resp.content}
     
     
 
@@ -104,5 +108,3 @@ Test Delete a pet
     ${resp}    Delete Request    session    uri=/v2/pet/123    headers=${hdrs}
     Should Be Equal As Strings    ${resp.status_code}    200    msg=${resp.content}
     Log    ${resp.content}
-
-        
