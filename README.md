@@ -11,3 +11,4 @@ https://raw.githubusercontent.com/MahmoudIMahmoud/PetstoreAPITest/master/image.p
 **Additionally**
 - I put a docker file for creating the environment.
 - I also added a shell script to run within docker.
+- To run you just need to run: docker-compose up
