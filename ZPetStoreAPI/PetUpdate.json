@@ -1,0 +1,18 @@
+{
+  "id": 123,
+  "category": {
+    "id": 0,
+    "name": "string"
+  },
+  "name": "doggie",
+  "photoUrls": [
+    "https://www.rspca.org.au/sites/default/files/website/2019/adopt-a-pet-adopting-a-small-animal-600x375.jpg"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+  "status": "Sold"
+}

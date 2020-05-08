@@ -1,0 +1,5 @@
+Base: https://petstore.swagger.io
+APIs:
+   AddURI: /v2/pet
+   Headers: Content-Type=application/json
+   RequestBody: PetSample.json

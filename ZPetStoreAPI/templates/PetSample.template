@@ -1,0 +1,23 @@
+{
+    "name": "{{name}}",
+    "photoUrls": [
+        "https://www.rspca.org.au/sites/default/files/website/2019/adopt-a-pet-adopting-a-dog-600x375.jpg",
+        "https://www.rspca.org.au/sites/default/files/website/2019/adopt-a-pet-adopting-a-dog-600x375.jpg"
+    ],
+    "id": "{{id}}",
+    "category": {
+        "id": "{{categoryID}}",
+        "name": "{{categoryName}}"
+    },
+    "tags": [
+        {
+            "id": "0",
+            "name": "dog"
+        },
+        {
+            "id": "1",
+            "name": "stil dog"
+        }
+    ],
+    "status": "{{ status|default('pending', true) }}"
+}
